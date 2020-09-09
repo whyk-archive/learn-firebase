@@ -1,0 +1,16 @@
+@mixin mq($point) {
+ 
+  $BP-small: "(max-width: 767px)"; // smartphome
+  $BP-medium: "(max-width: 1023px) and (min-width: 768px)"; // tablet
+  $BP-large: "(min-width: 1024px)"; // laptop
+ 
+  @if $point == sp {
+    @media #{$BP-small} { @content; }
+  }
+  @else if $point == tb {
+    @media #{$BP-medium} { @content; }
+  }
+  @else if $point == lp {
+    @media #{$BP-large} { @content; }
+  }
+}

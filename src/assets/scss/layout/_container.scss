@@ -1,0 +1,8 @@
+.l-container {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  min-height: 80vh;
+  @include mq(sp) {
+    grid-template-columns: 1fr;
+  }
+}

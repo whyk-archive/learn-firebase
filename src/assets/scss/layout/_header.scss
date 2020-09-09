@@ -1,0 +1,50 @@
+.l-header {
+  width: 100%;
+  padding-top: 25px;
+  background: $mainColor;
+}
+
+.l-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding-bottom: 40px;
+  margin: 0 auto 30px;
+  @include mq(tb) {
+    width: auto;
+    max-width: none;
+    margin-left: 10px;
+  }
+  @include mq(sp) {
+    width: auto;
+    max-width: none;
+    margin: 0 30px;
+  }
+}
+
+.l-header__head {
+  padding: 0;
+  margin: 0;
+  color: $subColor;
+}
+
+.l-header__head-text {
+  font-size: 4rem;
+}
+
+.l-header__head-link {
+  margin-left: 10px;
+  color: $subColor;
+}
+
+.l-header__head-icon {
+  font-size: 4rem;
+}
+
+.l-header__text {
+  padding: 0;
+  margin: 10px 0 0 10px;
+  font-size: 2rem;
+  color: $subColor;
+}

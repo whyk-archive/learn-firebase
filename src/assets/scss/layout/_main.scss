@@ -1,0 +1,14 @@
+.l-main {
+  grid-row: 1;
+  grid-column: 2;
+  width: 100%;
+  max-width: 1000px;
+  margin: $contentTop auto 0;
+  @include mq(sp) {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    width: auto;
+    max-width: none;
+    margin: $contentTop 20px 0;
+  }
+}

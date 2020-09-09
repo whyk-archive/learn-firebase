@@ -1,0 +1,40 @@
+.l-footer {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  background: $mainColor;
+  @include mq(sp) {
+    grid-row: 3;
+  }
+}
+
+.l-footer__list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.l-footer__item {
+  margin-left: 25px;
+  list-style: none;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.l-footer__item-link {
+  color: $subColor;
+}
+
+.l-footer__item-icon {
+  font-size: 3rem;
+}
+
+.l-footer__copy {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: $subColor;
+  text-align: center;
+}
