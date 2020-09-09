@@ -1,6 +1,6 @@
-import { prism } from './modules/syntax-highlight'
-import { indexAutoGen } from './modules/index-autogen'
-import { smoothScroll } from './modules/smooth-scroll'
+import { prism } from './modules/ui/syntax-highlight'
+import { indexAutoGen } from './modules/ui/index-autogen'
+import { smoothScroll } from './modules/ui/smooth-scroll'
 
 prism()
 indexAutoGen()
