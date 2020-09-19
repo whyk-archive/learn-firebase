@@ -1,4 +1,8 @@
-export interface firebaseConfig {
+export interface HTMLElementEvent<T extends HTMLElement> extends Event {
+  target: T
+}
+
+export interface FirebaseConfig {
   apiKey: string
   authDomain: string
   databaseURL: string

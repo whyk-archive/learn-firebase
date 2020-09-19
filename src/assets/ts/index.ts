@@ -1,15 +1,21 @@
-import { prism, indexAutoGen, smoothScroll } from './modules/ui/index'
 import { initializeApp, analytics, database, firestore } from 'firebase'
-import type { firebaseConfig } from './interface/firebase'
 import { config } from 'dotenv'
+import { prism, indexAutoGen, smoothScroll } from './modules/ui/'
+import type { HTMLElementEvent, FirebaseConfig } from './interface/'
 
 prism()
 indexAutoGen()
-smoothScroll()
+document.addEventListener('click', (e: HTMLElementEvent<HTMLAnchorElement>) => {
+  const target = e.target
+  if (!target.classList.contains('js-smooth-scroll')) return
+  e.preventDefault()
+  const targetId = target.hash
+  smoothScroll(targetId)
+})
 
 config()
 
-const fbconfig: firebaseConfig = {
+const fbconfig: FirebaseConfig = {
   apiKey: process.env.API_KEY,
   authDomain: process.env.AUTH_DOMAIN,
   databaseURL: process.env.DATABASE_URL,
